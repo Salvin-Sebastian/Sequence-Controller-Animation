@@ -3,36 +3,47 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Sequencing animations</title>
+    <title>Sequence Controller - Premium</title>
     <!-- Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
     <script type="text/javascript" src="main.js" defer></script>
     <link href="style.css" rel="stylesheet">
   </head>
 
   <body>
-    <div class="controls-panel">
-      <h1>Animation Control</h1>
-      <div class="selector-wrapper">
-        <label for="sequence-selector">Sequence Mode</label>
-        <div class="custom-select">
-          <select id="sequence-selector">
-            <option value="linear">Linear Matrix (L → R)</option>
-            <option value="reverse">Reverse Echo (R → L)</option>
-            <option value="random">Quantum Chaos (Random)</option>
-            <option value="nova">Nova Core (Center Out)</option>
-          </select>
+    <!-- Ambient background glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    
+    <div class="container">
+      <div class="card glass-panel">
+        <h1 class="title">Sequence Controller<span class="dot">.</span></h1>
+        
+        <div class="control-group">
+          <label for="sequence-selector">Animation Pattern</label>
+          <div class="select-wrapper">
+            <select id="sequence-selector">
+              <option value="linear">Linear Matrix (L → R)</option>
+              <option value="reverse">Reverse Echo (R → L)</option>
+              <option value="random">Quantum Chaos (Random)</option>
+              <option value="nova">Nova Core (Center Out)</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <button id="play-button">Initiate Sequence</button>
-    </div>
 
-    <div id="alice-container">
-      <img id="alice1" src="alice.svg" role="img" alt="Alice 1">
-      <img id="alice2" src="alice.svg" role="img" alt="Alice 2">
-      <img id="alice3" src="alice.svg" role="img" alt="Alice 3">
+        <div id="alice-container" class="shapes-container">
+          <img id="alice1" class="shape-img" src="alice.svg" role="img" alt="Alice 1">
+          <img id="alice2" class="shape-img" src="alice.svg" role="img" alt="Alice 2">
+          <img id="alice3" class="shape-img" src="alice.svg" role="img" alt="Alice 3">
+        </div>
+
+        <button id="play-button" class="play-btn">
+          <span class="btn-text">Initiate Sequence</span>
+          <div class="btn-glow"></div>
+        </button>
+      </div>
     </div>
   </body>
 </html>

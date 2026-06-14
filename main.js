@@ -17,6 +17,7 @@ const alices = [alice1, alice2, alice3];
 
 const selector = document.querySelector("#sequence-selector");
 const playBtn = document.querySelector("#play-button");
+const btnText = playBtn.querySelector(".btn-text");
 
 // Helper to reset animations
 function resetAlices() {
@@ -40,7 +41,7 @@ async function runSequence() {
   
   // Disable button during animation
   playBtn.disabled = true;
-  playBtn.textContent = "Sequence Active...";
+  if (btnText) btnText.textContent = "Sequence Active...";
   
   resetAlices();
 
@@ -76,7 +77,7 @@ async function runSequence() {
   } finally {
     // Re-enable button
     playBtn.disabled = false;
-    playBtn.textContent = "Initiate Sequence";
+    if (btnText) btnText.textContent = "Initiate Sequence";
   }
 }
 
