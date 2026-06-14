@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Sequence Controller - Premium Edition</title>
-    <link href="style.css" rel="stylesheet">
+    <title>Sequence Controller - Premium</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
     <script type="text/javascript" src="main.js" defer></script>
+    <link href="style.css" rel="stylesheet">
   </head>
+
   <body>
     <!-- Ambient background glows -->
     <div class="ambient-glow glow-1"></div>
@@ -29,12 +33,10 @@
           </div>
         </div>
 
-        <div class="shapes-container" id="shapes-stage">
-          <div class="shape circle red" id="shape-0"></div>
-          <div class="shape square yellow" id="shape-1"></div>
-          <div class="shape rounded-square green" id="shape-2"></div>
-          <div class="shape circle blue" id="shape-3"></div>
-          <div class="shape square purple" id="shape-4"></div>
+        <div id="alice-container">
+          <img id="alice1" class="shape-img" src="alice.svg" role="img" alt="Alice 1">
+          <img id="alice2" class="shape-img" src="alice.svg" role="img" alt="Alice 2">
+          <img id="alice3" class="shape-img" src="alice.svg" role="img" alt="Alice 3">
         </div>
 
         <button id="play-btn" class="play-btn">
